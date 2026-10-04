@@ -1,0 +1,47 @@
+{
+  "classification": "historical real-source snapshot",
+  "sourceProject": "01_Olist_B2B_Revenue_Funnel",
+  "files": [
+    {
+      "table": "fact_lead",
+      "file": "02_Cleaned_Data/fact_lead.csv",
+      "sha256": "4de1c6e78487c9d7243f113367a53f8c1590e70bc3f80a90253c23f15b3d57a3"
+    },
+    {
+      "table": "fact_seller_order",
+      "file": "02_Cleaned_Data/fact_seller_order.csv",
+      "sha256": "26ca822c084f19172ef11616ffb6a57435867e8c0888127e64dcf512a069566f"
+    },
+    {
+      "table": "dim_channel",
+      "file": "02_Cleaned_Data/dim_channel.csv",
+      "sha256": "99b8f5630c9f7d16715db579afb05974b04dc137d3befb0e586bbf7a4dfe11c5"
+    },
+    {
+      "table": "dim_segment",
+      "file": "02_Cleaned_Data/dim_segment.csv",
+      "sha256": "520ccc2c13dda42c3d7eaba9ee52d0c35056b29a77ae062d1d7ab844628dc0bc"
+    },
+    {
+      "table": "dim_sdr",
+      "file": "02_Cleaned_Data/dim_sdr.csv",
+      "sha256": "0c1723e410e91e7cf1dac568f4b8cf469a7578e0d7bd063f8a4e90209e91bbe2"
+    },
+    {
+      "table": "dim_sales_rep",
+      "file": "02_Cleaned_Data/dim_sales_rep.csv",
+      "sha256": "91dcafe3c18a3ac41aaf1acecc2c768a50ad851aad80d654b78602b4de79c60d"
+    },
+    {
+      "table": "dim_seller",
+      "file": "06_PowerBI/Native/ModelData/dim_seller.csv",
+      "sha256": "0e5b72502ff68e2350319d7373daf8a289176e20374092dbd3214e50c924cca7"
+    },
+    {
+      "table": "dim_date",
+      "file": "02_Cleaned_Data/dim_date.csv",
+      "sha256": "967f1e2eb11a0e7d576ea85043629957997f8bc63a343c97b8981713fd4292f4"
+    }
+  ],
+  "generatedSellerDimension": "B2B augments marketplace sellers with converted unmatched seller IDs from fact_lead; no records or values fabricated."
+}

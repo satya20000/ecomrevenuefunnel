@@ -1,0 +1,72 @@
+{
+  "name": "ProfessionalAnalytics",
+  "dataColors": [
+    "#007F78",
+    "#D69036",
+    "#A23D4A",
+    "#8695AA",
+    "#49A79D",
+    "#7970BE"
+  ],
+  "background": "#F4F6F9",
+  "foreground": "#172A43",
+  "tableAccent": "#007F78",
+  "textClasses": {
+    "label": {
+      "fontFace": "Segoe UI",
+      "fontSize": 11
+    },
+    "title": {
+      "fontFace": "Segoe UI Semibold",
+      "fontSize": 13
+    },
+    "callout": {
+      "fontFace": "Segoe UI Semibold",
+      "fontSize": 28
+    },
+    "header": {
+      "fontFace": "Segoe UI Semibold",
+      "fontSize": 13
+    }
+  },
+  "visualStyles": {
+    "*": {
+      "*": {
+        "background": [
+          {
+            "show": true,
+            "color": {
+              "solid": {
+                "color": "#FFFFFF"
+              }
+            },
+            "transparency": 0
+          }
+        ],
+        "title": [
+          {
+            "show": true,
+            "fontColor": {
+              "solid": {
+                "color": "#172A43"
+              }
+            },
+            "fontSize": 13,
+            "fontFamily": "Segoe UI Semibold",
+            "alignment": "left"
+          }
+        ],
+        "border": [
+          {
+            "show": false
+          }
+        ],
+        "visualHeader": [
+          {
+            "show": true
+          }
+        ]
+      }
+    }
+  }
+}

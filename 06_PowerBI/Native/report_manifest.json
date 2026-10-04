@@ -1,0 +1,1786 @@
+{
+  "project": "RevenueFunnel",
+  "pages": [
+    {
+      "name": "page1",
+      "title": "Overview",
+      "count": 13,
+      "visuals": [
+        {
+          "type": "textbox",
+          "title": "",
+          "position": {
+            "x": 24,
+            "y": 12,
+            "width": 1388,
+            "height": 62,
+            "z": 1,
+            "tabOrder": 1
+          },
+          "roles": {}
+        },
+        {
+          "type": "slicer",
+          "title": "Contact month",
+          "position": {
+            "x": 24,
+            "y": 84,
+            "width": 448,
+            "height": 76,
+            "z": 2,
+            "tabOrder": 2
+          },
+          "roles": {
+            "Values": [
+              {
+                "field": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "dim_date"
+                      }
+                    },
+                    "Property": "month"
+                  }
+                },
+                "queryRef": "dim_date.month",
+                "nativeQueryRef": "month",
+                "displayName": "Contact month"
+              }
+            ]
+          }
+        },
+        {
+          "type": "slicer",
+          "title": "Acquisition channel",
+          "position": {
+            "x": 496,
+            "y": 84,
+            "width": 448,
+            "height": 76,
+            "z": 3,
+            "tabOrder": 3
+          },
+          "roles": {
+            "Values": [
+              {
+                "field": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "dim_channel"
+                      }
+                    },
+                    "Property": "origin"
+                  }
+                },
+                "queryRef": "dim_channel.origin",
+                "nativeQueryRef": "origin",
+                "displayName": "Acquisition channel"
+              }
+            ]
+          }
+        },
+        {
+          "type": "slicer",
+          "title": "Seller state",
+          "position": {
+            "x": 968,
+            "y": 84,
+            "width": 448,
+            "height": 76,
+            "z": 4,
+            "tabOrder": 4
+          },
+          "roles": {
+            "Values": [
+              {
+                "field": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_lead"
+                      }
+                    },
+                    "Property": "seller_state"
+                  }
+                },
+                "queryRef": "fact_lead.seller_state",
+                "nativeQueryRef": "seller_state",
+                "displayName": "Seller state"
+              }
+            ]
+          }
+        },
+        {
+          "type": "card",
+          "title": "Total MQLs",
+          "position": {
+            "x": 24,
+            "y": 180,
+            "width": 330,
+            "height": 98,
+            "z": 5,
+            "tabOrder": 5
+          },
+          "roles": {
+            "Values": [
+              {
+                "field": {
+                  "Measure": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_lead"
+                      }
+                    },
+                    "Property": "Total MQLs"
+                  }
+                },
+                "queryRef": "fact_lead.Total MQLs",
+                "nativeQueryRef": "Total MQLs",
+                "displayName": "Total MQLs"
+              }
+            ]
+          }
+        },
+        {
+          "type": "card",
+          "title": "Conversion Rate",
+          "position": {
+            "x": 378,
+            "y": 180,
+            "width": 330,
+            "height": 98,
+            "z": 6,
+            "tabOrder": 6
+          },
+          "roles": {
+            "Values": [
+              {
+                "field": {
+                  "Measure": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_lead"
+                      }
+                    },
+                    "Property": "Conversion Rate"
+                  }
+                },
+                "queryRef": "fact_lead.Conversion Rate",
+                "nativeQueryRef": "Conversion Rate",
+                "displayName": "Conversion Rate"
+              }
+            ]
+          }
+        },
+        {
+          "type": "card",
+          "title": "Activation Rate",
+          "position": {
+            "x": 732,
+            "y": 180,
+            "width": 330,
+            "height": 98,
+            "z": 7,
+            "tabOrder": 7
+          },
+          "roles": {
+            "Values": [
+              {
+                "field": {
+                  "Measure": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_lead"
+                      }
+                    },
+                    "Property": "Activation Rate"
+                  }
+                },
+                "queryRef": "fact_lead.Activation Rate",
+                "nativeQueryRef": "Activation Rate",
+                "displayName": "Activation Rate"
+              }
+            ]
+          }
+        },
+        {
+          "type": "card",
+          "title": "Attributed GMV",
+          "position": {
+            "x": 1086,
+            "y": 180,
+            "width": 330,
+            "height": 98,
+            "z": 8,
+            "tabOrder": 8
+          },
+          "roles": {
+            "Values": [
+              {
+                "field": {
+                  "Measure": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_lead"
+                      }
+                    },
+                    "Property": "Attributed GMV"
+                  }
+                },
+                "queryRef": "fact_lead.Attributed GMV",
+                "nativeQueryRef": "Attributed GMV",
+                "displayName": "Attributed GMV"
+              }
+            ]
+          }
+        },
+        {
+          "type": "textbox",
+          "title": "",
+          "position": {
+            "x": 24,
+            "y": 918,
+            "width": 1392,
+            "height": 32,
+            "z": 9,
+            "tabOrder": 9
+          },
+          "roles": {}
+        },
+        {
+          "type": "lineChart",
+          "title": "Lead cohorts: contacts and closed deals",
+          "position": {
+            "x": 24,
+            "y": 300,
+            "width": 684,
+            "height": 282,
+            "z": 10,
+            "tabOrder": 10
+          },
+          "roles": {
+            "Category": [
+              {
+                "field": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "dim_date"
+                      }
+                    },
+                    "Property": "month"
+                  }
+                },
+                "queryRef": "dim_date.month",
+                "nativeQueryRef": "month",
+                "displayName": "Month"
+              }
+            ],
+            "Y": [
+              {
+                "field": {
+                  "Measure": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_lead"
+                      }
+                    },
+                    "Property": "Total MQLs"
+                  }
+                },
+                "queryRef": "fact_lead.Total MQLs",
+                "nativeQueryRef": "Total MQLs",
+                "displayName": "Total MQLs"
+              },
+              {
+                "field": {
+                  "Measure": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_lead"
+                      }
+                    },
+                    "Property": "Closed Deals"
+                  }
+                },
+                "queryRef": "fact_lead.Closed Deals",
+                "nativeQueryRef": "Closed Deals",
+                "displayName": "Closed Deals"
+              }
+            ]
+          }
+        },
+        {
+          "type": "clusteredBarChart",
+          "title": "Observed GMV by acquisition channel · BRL",
+          "position": {
+            "x": 732,
+            "y": 300,
+            "width": 684,
+            "height": 282,
+            "z": 11,
+            "tabOrder": 11
+          },
+          "roles": {
+            "Category": [
+              {
+                "field": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "dim_channel"
+                      }
+                    },
+                    "Property": "origin"
+                  }
+                },
+                "queryRef": "dim_channel.origin",
+                "nativeQueryRef": "origin",
+                "displayName": "Origin"
+              }
+            ],
+            "Y": [
+              {
+                "field": {
+                  "Measure": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_lead"
+                      }
+                    },
+                    "Property": "Attributed GMV"
+                  }
+                },
+                "queryRef": "fact_lead.Attributed GMV",
+                "nativeQueryRef": "Attributed GMV",
+                "displayName": "Attributed GMV"
+              }
+            ]
+          }
+        },
+        {
+          "type": "clusteredBarChart",
+          "title": "GMV per lead · channel quality, not ROI",
+          "position": {
+            "x": 24,
+            "y": 602,
+            "width": 684,
+            "height": 290,
+            "z": 12,
+            "tabOrder": 12
+          },
+          "roles": {
+            "Category": [
+              {
+                "field": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "dim_channel"
+                      }
+                    },
+                    "Property": "origin"
+                  }
+                },
+                "queryRef": "dim_channel.origin",
+                "nativeQueryRef": "origin",
+                "displayName": "Origin"
+              }
+            ],
+            "Y": [
+              {
+                "field": {
+                  "Measure": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_lead"
+                      }
+                    },
+                    "Property": "GMV per Lead"
+                  }
+                },
+                "queryRef": "fact_lead.GMV per Lead",
+                "nativeQueryRef": "GMV per Lead",
+                "displayName": "GMV per Lead"
+              }
+            ]
+          }
+        },
+        {
+          "type": "card",
+          "title": "Investigation context",
+          "position": {
+            "x": 732,
+            "y": 602,
+            "width": 684,
+            "height": 290,
+            "z": 13,
+            "tabOrder": 13
+          },
+          "roles": {
+            "Values": [
+              {
+                "field": {
+                  "Measure": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_lead"
+                      }
+                    },
+                    "Property": "Context Insight"
+                  }
+                },
+                "queryRef": "fact_lead.Context Insight",
+                "nativeQueryRef": "Context Insight",
+                "displayName": "Context Insight"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "page2",
+      "title": "Channels & cohorts",
+      "count": 12,
+      "visuals": [
+        {
+          "type": "textbox",
+          "title": "",
+          "position": {
+            "x": 24,
+            "y": 12,
+            "width": 1388,
+            "height": 62,
+            "z": 1,
+            "tabOrder": 1
+          },
+          "roles": {}
+        },
+        {
+          "type": "slicer",
+          "title": "Contact month",
+          "position": {
+            "x": 24,
+            "y": 84,
+            "width": 448,
+            "height": 76,
+            "z": 2,
+            "tabOrder": 2
+          },
+          "roles": {
+            "Values": [
+              {
+                "field": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "dim_date"
+                      }
+                    },
+                    "Property": "month"
+                  }
+                },
+                "queryRef": "dim_date.month",
+                "nativeQueryRef": "month",
+                "displayName": "Contact month"
+              }
+            ]
+          }
+        },
+        {
+          "type": "slicer",
+          "title": "Acquisition channel",
+          "position": {
+            "x": 496,
+            "y": 84,
+            "width": 448,
+            "height": 76,
+            "z": 3,
+            "tabOrder": 3
+          },
+          "roles": {
+            "Values": [
+              {
+                "field": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "dim_channel"
+                      }
+                    },
+                    "Property": "origin"
+                  }
+                },
+                "queryRef": "dim_channel.origin",
+                "nativeQueryRef": "origin",
+                "displayName": "Acquisition channel"
+              }
+            ]
+          }
+        },
+        {
+          "type": "slicer",
+          "title": "Seller state",
+          "position": {
+            "x": 968,
+            "y": 84,
+            "width": 448,
+            "height": 76,
+            "z": 4,
+            "tabOrder": 4
+          },
+          "roles": {
+            "Values": [
+              {
+                "field": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_lead"
+                      }
+                    },
+                    "Property": "seller_state"
+                  }
+                },
+                "queryRef": "fact_lead.seller_state",
+                "nativeQueryRef": "seller_state",
+                "displayName": "Seller state"
+              }
+            ]
+          }
+        },
+        {
+          "type": "card",
+          "title": "GMV per Lead",
+          "position": {
+            "x": 24,
+            "y": 180,
+            "width": 330,
+            "height": 98,
+            "z": 5,
+            "tabOrder": 5
+          },
+          "roles": {
+            "Values": [
+              {
+                "field": {
+                  "Measure": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_lead"
+                      }
+                    },
+                    "Property": "GMV per Lead"
+                  }
+                },
+                "queryRef": "fact_lead.GMV per Lead",
+                "nativeQueryRef": "GMV per Lead",
+                "displayName": "GMV per Lead"
+              }
+            ]
+          }
+        },
+        {
+          "type": "card",
+          "title": "Average Close Days",
+          "position": {
+            "x": 378,
+            "y": 180,
+            "width": 330,
+            "height": 98,
+            "z": 6,
+            "tabOrder": 6
+          },
+          "roles": {
+            "Values": [
+              {
+                "field": {
+                  "Measure": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_lead"
+                      }
+                    },
+                    "Property": "Average Close Days"
+                  }
+                },
+                "queryRef": "fact_lead.Average Close Days",
+                "nativeQueryRef": "Average Close Days",
+                "displayName": "Average Close Days"
+              }
+            ]
+          }
+        },
+        {
+          "type": "card",
+          "title": "Repeat Seller Rate",
+          "position": {
+            "x": 732,
+            "y": 180,
+            "width": 330,
+            "height": 98,
+            "z": 7,
+            "tabOrder": 7
+          },
+          "roles": {
+            "Values": [
+              {
+                "field": {
+                  "Measure": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_lead"
+                      }
+                    },
+                    "Property": "Repeat Seller Rate"
+                  }
+                },
+                "queryRef": "fact_lead.Repeat Seller Rate",
+                "nativeQueryRef": "Repeat Seller Rate",
+                "displayName": "Repeat Seller Rate"
+              }
+            ]
+          }
+        },
+        {
+          "type": "card",
+          "title": "Top 10 Percent GMV Share",
+          "position": {
+            "x": 1086,
+            "y": 180,
+            "width": 330,
+            "height": 98,
+            "z": 8,
+            "tabOrder": 8
+          },
+          "roles": {
+            "Values": [
+              {
+                "field": {
+                  "Measure": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_lead"
+                      }
+                    },
+                    "Property": "Top 10 Percent GMV Share"
+                  }
+                },
+                "queryRef": "fact_lead.Top 10 Percent GMV Share",
+                "nativeQueryRef": "Top 10 Percent GMV Share",
+                "displayName": "Top 10 Percent GMV Share"
+              }
+            ]
+          }
+        },
+        {
+          "type": "textbox",
+          "title": "",
+          "position": {
+            "x": 24,
+            "y": 918,
+            "width": 1392,
+            "height": 32,
+            "z": 9,
+            "tabOrder": 9
+          },
+          "roles": {}
+        },
+        {
+          "type": "lineChart",
+          "title": "Conversion by contact cohort · maturity differs",
+          "position": {
+            "x": 24,
+            "y": 300,
+            "width": 684,
+            "height": 282,
+            "z": 10,
+            "tabOrder": 10
+          },
+          "roles": {
+            "Category": [
+              {
+                "field": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "dim_date"
+                      }
+                    },
+                    "Property": "month"
+                  }
+                },
+                "queryRef": "dim_date.month",
+                "nativeQueryRef": "month",
+                "displayName": "Month"
+              }
+            ],
+            "Y": [
+              {
+                "field": {
+                  "Measure": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_lead"
+                      }
+                    },
+                    "Property": "Conversion Rate"
+                  }
+                },
+                "queryRef": "fact_lead.Conversion Rate",
+                "nativeQueryRef": "Conversion Rate",
+                "displayName": "Conversion Rate"
+              }
+            ]
+          }
+        },
+        {
+          "type": "clusteredBarChart",
+          "title": "Activation among converted sellers",
+          "position": {
+            "x": 732,
+            "y": 300,
+            "width": 684,
+            "height": 282,
+            "z": 11,
+            "tabOrder": 11
+          },
+          "roles": {
+            "Category": [
+              {
+                "field": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "dim_channel"
+                      }
+                    },
+                    "Property": "origin"
+                  }
+                },
+                "queryRef": "dim_channel.origin",
+                "nativeQueryRef": "origin",
+                "displayName": "Origin"
+              }
+            ],
+            "Y": [
+              {
+                "field": {
+                  "Measure": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_lead"
+                      }
+                    },
+                    "Property": "Activation Rate"
+                  }
+                },
+                "queryRef": "fact_lead.Activation Rate",
+                "nativeQueryRef": "Activation Rate",
+                "displayName": "Activation Rate"
+              }
+            ]
+          }
+        },
+        {
+          "type": "tableEx",
+          "title": "Channel comparison · review counts before prioritizing spend",
+          "position": {
+            "x": 24,
+            "y": 600,
+            "width": 1392,
+            "height": 292,
+            "z": 12,
+            "tabOrder": 12
+          },
+          "roles": {
+            "Values": [
+              {
+                "field": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "dim_channel"
+                      }
+                    },
+                    "Property": "origin"
+                  }
+                },
+                "queryRef": "dim_channel.origin",
+                "nativeQueryRef": "origin",
+                "displayName": "Channel"
+              },
+              {
+                "field": {
+                  "Measure": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_lead"
+                      }
+                    },
+                    "Property": "Total MQLs"
+                  }
+                },
+                "queryRef": "fact_lead.Total MQLs",
+                "nativeQueryRef": "Total MQLs",
+                "displayName": "Total MQLs"
+              },
+              {
+                "field": {
+                  "Measure": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_lead"
+                      }
+                    },
+                    "Property": "Closed Deals"
+                  }
+                },
+                "queryRef": "fact_lead.Closed Deals",
+                "nativeQueryRef": "Closed Deals",
+                "displayName": "Closed Deals"
+              },
+              {
+                "field": {
+                  "Measure": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_lead"
+                      }
+                    },
+                    "Property": "Conversion Rate"
+                  }
+                },
+                "queryRef": "fact_lead.Conversion Rate",
+                "nativeQueryRef": "Conversion Rate",
+                "displayName": "Conversion Rate"
+              },
+              {
+                "field": {
+                  "Measure": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_lead"
+                      }
+                    },
+                    "Property": "Active Sellers"
+                  }
+                },
+                "queryRef": "fact_lead.Active Sellers",
+                "nativeQueryRef": "Active Sellers",
+                "displayName": "Active Sellers"
+              },
+              {
+                "field": {
+                  "Measure": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_lead"
+                      }
+                    },
+                    "Property": "Activation Rate"
+                  }
+                },
+                "queryRef": "fact_lead.Activation Rate",
+                "nativeQueryRef": "Activation Rate",
+                "displayName": "Activation Rate"
+              },
+              {
+                "field": {
+                  "Measure": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_lead"
+                      }
+                    },
+                    "Property": "Attributed GMV"
+                  }
+                },
+                "queryRef": "fact_lead.Attributed GMV",
+                "nativeQueryRef": "Attributed GMV",
+                "displayName": "Attributed GMV"
+              },
+              {
+                "field": {
+                  "Measure": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_lead"
+                      }
+                    },
+                    "Property": "GMV per Lead"
+                  }
+                },
+                "queryRef": "fact_lead.GMV per Lead",
+                "nativeQueryRef": "GMV per Lead",
+                "displayName": "GMV per Lead"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "page3",
+      "title": "Seller investigations",
+      "count": 12,
+      "visuals": [
+        {
+          "type": "textbox",
+          "title": "",
+          "position": {
+            "x": 24,
+            "y": 12,
+            "width": 1388,
+            "height": 62,
+            "z": 1,
+            "tabOrder": 1
+          },
+          "roles": {}
+        },
+        {
+          "type": "slicer",
+          "title": "Contact month",
+          "position": {
+            "x": 24,
+            "y": 84,
+            "width": 448,
+            "height": 76,
+            "z": 2,
+            "tabOrder": 2
+          },
+          "roles": {
+            "Values": [
+              {
+                "field": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "dim_date"
+                      }
+                    },
+                    "Property": "month"
+                  }
+                },
+                "queryRef": "dim_date.month",
+                "nativeQueryRef": "month",
+                "displayName": "Contact month"
+              }
+            ]
+          }
+        },
+        {
+          "type": "slicer",
+          "title": "Acquisition channel",
+          "position": {
+            "x": 496,
+            "y": 84,
+            "width": 448,
+            "height": 76,
+            "z": 3,
+            "tabOrder": 3
+          },
+          "roles": {
+            "Values": [
+              {
+                "field": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "dim_channel"
+                      }
+                    },
+                    "Property": "origin"
+                  }
+                },
+                "queryRef": "dim_channel.origin",
+                "nativeQueryRef": "origin",
+                "displayName": "Acquisition channel"
+              }
+            ]
+          }
+        },
+        {
+          "type": "slicer",
+          "title": "Seller state",
+          "position": {
+            "x": 968,
+            "y": 84,
+            "width": 448,
+            "height": 76,
+            "z": 4,
+            "tabOrder": 4
+          },
+          "roles": {
+            "Values": [
+              {
+                "field": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_lead"
+                      }
+                    },
+                    "Property": "seller_state"
+                  }
+                },
+                "queryRef": "fact_lead.seller_state",
+                "nativeQueryRef": "seller_state",
+                "displayName": "Seller state"
+              }
+            ]
+          }
+        },
+        {
+          "type": "card",
+          "title": "Onboarding Backlog",
+          "position": {
+            "x": 24,
+            "y": 180,
+            "width": 330,
+            "height": 98,
+            "z": 5,
+            "tabOrder": 5
+          },
+          "roles": {
+            "Values": [
+              {
+                "field": {
+                  "Measure": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_lead"
+                      }
+                    },
+                    "Property": "Onboarding Backlog"
+                  }
+                },
+                "queryRef": "fact_lead.Onboarding Backlog",
+                "nativeQueryRef": "Onboarding Backlog",
+                "displayName": "Onboarding Backlog"
+              }
+            ]
+          }
+        },
+        {
+          "type": "card",
+          "title": "Active Sellers",
+          "position": {
+            "x": 378,
+            "y": 180,
+            "width": 330,
+            "height": 98,
+            "z": 6,
+            "tabOrder": 6
+          },
+          "roles": {
+            "Values": [
+              {
+                "field": {
+                  "Measure": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_lead"
+                      }
+                    },
+                    "Property": "Active Sellers"
+                  }
+                },
+                "queryRef": "fact_lead.Active Sellers",
+                "nativeQueryRef": "Active Sellers",
+                "displayName": "Active Sellers"
+              }
+            ]
+          }
+        },
+        {
+          "type": "card",
+          "title": "Average First Sale Days",
+          "position": {
+            "x": 732,
+            "y": 180,
+            "width": 330,
+            "height": 98,
+            "z": 7,
+            "tabOrder": 7
+          },
+          "roles": {
+            "Values": [
+              {
+                "field": {
+                  "Measure": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_lead"
+                      }
+                    },
+                    "Property": "Average First Sale Days"
+                  }
+                },
+                "queryRef": "fact_lead.Average First Sale Days",
+                "nativeQueryRef": "Average First Sale Days",
+                "displayName": "Average First Sale Days"
+              }
+            ]
+          }
+        },
+        {
+          "type": "card",
+          "title": "Average Active Seller GMV",
+          "position": {
+            "x": 1086,
+            "y": 180,
+            "width": 330,
+            "height": 98,
+            "z": 8,
+            "tabOrder": 8
+          },
+          "roles": {
+            "Values": [
+              {
+                "field": {
+                  "Measure": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_lead"
+                      }
+                    },
+                    "Property": "Average Active Seller GMV"
+                  }
+                },
+                "queryRef": "fact_lead.Average Active Seller GMV",
+                "nativeQueryRef": "Average Active Seller GMV",
+                "displayName": "Average Active Seller GMV"
+              }
+            ]
+          }
+        },
+        {
+          "type": "textbox",
+          "title": "",
+          "position": {
+            "x": 24,
+            "y": 918,
+            "width": 1392,
+            "height": 32,
+            "z": 9,
+            "tabOrder": 9
+          },
+          "roles": {}
+        },
+        {
+          "type": "clusteredBarChart",
+          "title": "GMV by business segment · converted sellers only",
+          "position": {
+            "x": 24,
+            "y": 300,
+            "width": 684,
+            "height": 282,
+            "z": 10,
+            "tabOrder": 10
+          },
+          "roles": {
+            "Category": [
+              {
+                "field": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "dim_segment"
+                      }
+                    },
+                    "Property": "business_segment"
+                  }
+                },
+                "queryRef": "dim_segment.business_segment",
+                "nativeQueryRef": "business_segment",
+                "displayName": "Business Segment"
+              }
+            ],
+            "Y": [
+              {
+                "field": {
+                  "Measure": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_lead"
+                      }
+                    },
+                    "Property": "Attributed GMV"
+                  }
+                },
+                "queryRef": "fact_lead.Attributed GMV",
+                "nativeQueryRef": "Attributed GMV",
+                "displayName": "Attributed GMV"
+              }
+            ]
+          }
+        },
+        {
+          "type": "clusteredBarChart",
+          "title": "Activation by business segment · converted sellers only",
+          "position": {
+            "x": 732,
+            "y": 300,
+            "width": 684,
+            "height": 282,
+            "z": 11,
+            "tabOrder": 11
+          },
+          "roles": {
+            "Category": [
+              {
+                "field": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "dim_segment"
+                      }
+                    },
+                    "Property": "business_segment"
+                  }
+                },
+                "queryRef": "dim_segment.business_segment",
+                "nativeQueryRef": "business_segment",
+                "displayName": "Business Segment"
+              }
+            ],
+            "Y": [
+              {
+                "field": {
+                  "Measure": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_lead"
+                      }
+                    },
+                    "Property": "Activation Rate"
+                  }
+                },
+                "queryRef": "fact_lead.Activation Rate",
+                "nativeQueryRef": "Activation Rate",
+                "displayName": "Activation Rate"
+              }
+            ]
+          }
+        },
+        {
+          "type": "tableEx",
+          "title": "Onboarding queue · converted with no observed post-close delivered order",
+          "position": {
+            "x": 24,
+            "y": 600,
+            "width": 1392,
+            "height": 292,
+            "z": 12,
+            "tabOrder": 12
+          },
+          "roles": {
+            "Values": [
+              {
+                "field": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_lead"
+                      }
+                    },
+                    "Property": "seller_id"
+                  }
+                },
+                "queryRef": "fact_lead.seller_id",
+                "nativeQueryRef": "seller_id",
+                "displayName": "Seller ID"
+              },
+              {
+                "field": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_lead"
+                      }
+                    },
+                    "Property": "origin"
+                  }
+                },
+                "queryRef": "fact_lead.origin",
+                "nativeQueryRef": "origin",
+                "displayName": "Channel"
+              },
+              {
+                "field": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_lead"
+                      }
+                    },
+                    "Property": "won_date"
+                  }
+                },
+                "queryRef": "fact_lead.won_date",
+                "nativeQueryRef": "won_date",
+                "displayName": "Closed date"
+              },
+              {
+                "field": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_lead"
+                      }
+                    },
+                    "Property": "business_segment"
+                  }
+                },
+                "queryRef": "fact_lead.business_segment",
+                "nativeQueryRef": "business_segment",
+                "displayName": "Segment"
+              },
+              {
+                "field": {
+                  "Measure": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_lead"
+                      }
+                    },
+                    "Property": "Average Close Days"
+                  }
+                },
+                "queryRef": "fact_lead.Average Close Days",
+                "nativeQueryRef": "Average Close Days",
+                "displayName": "Average Close Days"
+              },
+              {
+                "field": {
+                  "Measure": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_lead"
+                      }
+                    },
+                    "Property": "Closed Deals"
+                  }
+                },
+                "queryRef": "fact_lead.Closed Deals",
+                "nativeQueryRef": "Closed Deals",
+                "displayName": "Closed Deals"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "page4",
+      "title": "Definitions & use",
+      "count": 19,
+      "visuals": [
+        {
+          "type": "textbox",
+          "title": "",
+          "position": {
+            "x": 24,
+            "y": 12,
+            "width": 1388,
+            "height": 62,
+            "z": 1,
+            "tabOrder": 1
+          },
+          "roles": {}
+        },
+        {
+          "type": "slicer",
+          "title": "Contact month",
+          "position": {
+            "x": 24,
+            "y": 84,
+            "width": 448,
+            "height": 76,
+            "z": 2,
+            "tabOrder": 2
+          },
+          "roles": {
+            "Values": [
+              {
+                "field": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "dim_date"
+                      }
+                    },
+                    "Property": "month"
+                  }
+                },
+                "queryRef": "dim_date.month",
+                "nativeQueryRef": "month",
+                "displayName": "Contact month"
+              }
+            ]
+          }
+        },
+        {
+          "type": "slicer",
+          "title": "Acquisition channel",
+          "position": {
+            "x": 496,
+            "y": 84,
+            "width": 448,
+            "height": 76,
+            "z": 3,
+            "tabOrder": 3
+          },
+          "roles": {
+            "Values": [
+              {
+                "field": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "dim_channel"
+                      }
+                    },
+                    "Property": "origin"
+                  }
+                },
+                "queryRef": "dim_channel.origin",
+                "nativeQueryRef": "origin",
+                "displayName": "Acquisition channel"
+              }
+            ]
+          }
+        },
+        {
+          "type": "slicer",
+          "title": "Seller state",
+          "position": {
+            "x": 968,
+            "y": 84,
+            "width": 448,
+            "height": 76,
+            "z": 4,
+            "tabOrder": 4
+          },
+          "roles": {
+            "Values": [
+              {
+                "field": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_lead"
+                      }
+                    },
+                    "Property": "seller_state"
+                  }
+                },
+                "queryRef": "fact_lead.seller_state",
+                "nativeQueryRef": "seller_state",
+                "displayName": "Seller state"
+              }
+            ]
+          }
+        },
+        {
+          "type": "card",
+          "title": "Total MQLs",
+          "position": {
+            "x": 24,
+            "y": 180,
+            "width": 330,
+            "height": 98,
+            "z": 5,
+            "tabOrder": 5
+          },
+          "roles": {
+            "Values": [
+              {
+                "field": {
+                  "Measure": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_lead"
+                      }
+                    },
+                    "Property": "Total MQLs"
+                  }
+                },
+                "queryRef": "fact_lead.Total MQLs",
+                "nativeQueryRef": "Total MQLs",
+                "displayName": "Total MQLs"
+              }
+            ]
+          }
+        },
+        {
+          "type": "card",
+          "title": "Conversion Rate",
+          "position": {
+            "x": 378,
+            "y": 180,
+            "width": 330,
+            "height": 98,
+            "z": 6,
+            "tabOrder": 6
+          },
+          "roles": {
+            "Values": [
+              {
+                "field": {
+                  "Measure": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_lead"
+                      }
+                    },
+                    "Property": "Conversion Rate"
+                  }
+                },
+                "queryRef": "fact_lead.Conversion Rate",
+                "nativeQueryRef": "Conversion Rate",
+                "displayName": "Conversion Rate"
+              }
+            ]
+          }
+        },
+        {
+          "type": "card",
+          "title": "Activation Rate",
+          "position": {
+            "x": 732,
+            "y": 180,
+            "width": 330,
+            "height": 98,
+            "z": 7,
+            "tabOrder": 7
+          },
+          "roles": {
+            "Values": [
+              {
+                "field": {
+                  "Measure": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_lead"
+                      }
+                    },
+                    "Property": "Activation Rate"
+                  }
+                },
+                "queryRef": "fact_lead.Activation Rate",
+                "nativeQueryRef": "Activation Rate",
+                "displayName": "Activation Rate"
+              }
+            ]
+          }
+        },
+        {
+          "type": "card",
+          "title": "Attributed GMV",
+          "position": {
+            "x": 1086,
+            "y": 180,
+            "width": 330,
+            "height": 98,
+            "z": 8,
+            "tabOrder": 8
+          },
+          "roles": {
+            "Values": [
+              {
+                "field": {
+                  "Measure": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_lead"
+                      }
+                    },
+                    "Property": "Attributed GMV"
+                  }
+                },
+                "queryRef": "fact_lead.Attributed GMV",
+                "nativeQueryRef": "Attributed GMV",
+                "displayName": "Attributed GMV"
+              }
+            ]
+          }
+        },
+        {
+          "type": "textbox",
+          "title": "",
+          "position": {
+            "x": 24,
+            "y": 918,
+            "width": 1392,
+            "height": 32,
+            "z": 9,
+            "tabOrder": 9
+          },
+          "roles": {}
+        },
+        {
+          "type": "textbox",
+          "title": "",
+          "position": {
+            "x": 32,
+            "y": 302,
+            "width": 1350,
+            "height": 30,
+            "z": 10,
+            "tabOrder": 10
+          },
+          "roles": {}
+        },
+        {
+          "type": "textbox",
+          "title": "",
+          "position": {
+            "x": 32,
+            "y": 337,
+            "width": 1350,
+            "height": 72,
+            "z": 11,
+            "tabOrder": 11
+          },
+          "roles": {}
+        },
+        {
+          "type": "textbox",
+          "title": "",
+          "position": {
+            "x": 32,
+            "y": 414,
+            "width": 1350,
+            "height": 30,
+            "z": 12,
+            "tabOrder": 12
+          },
+          "roles": {}
+        },
+        {
+          "type": "textbox",
+          "title": "",
+          "position": {
+            "x": 32,
+            "y": 449,
+            "width": 1350,
+            "height": 72,
+            "z": 13,
+            "tabOrder": 13
+          },
+          "roles": {}
+        },
+        {
+          "type": "textbox",
+          "title": "",
+          "position": {
+            "x": 32,
+            "y": 526,
+            "width": 1350,
+            "height": 30,
+            "z": 14,
+            "tabOrder": 14
+          },
+          "roles": {}
+        },
+        {
+          "type": "textbox",
+          "title": "",
+          "position": {
+            "x": 32,
+            "y": 561,
+            "width": 1350,
+            "height": 72,
+            "z": 15,
+            "tabOrder": 15
+          },
+          "roles": {}
+        },
+        {
+          "type": "textbox",
+          "title": "",
+          "position": {
+            "x": 32,
+            "y": 638,
+            "width": 1350,
+            "height": 30,
+            "z": 16,
+            "tabOrder": 16
+          },
+          "roles": {}
+        },
+        {
+          "type": "textbox",
+          "title": "",
+          "position": {
+            "x": 32,
+            "y": 673,
+            "width": 1350,
+            "height": 72,
+            "z": 17,
+            "tabOrder": 17
+          },
+          "roles": {}
+        },
+        {
+          "type": "textbox",
+          "title": "",
+          "position": {
+            "x": 32,
+            "y": 750,
+            "width": 1350,
+            "height": 30,
+            "z": 18,
+            "tabOrder": 18
+          },
+          "roles": {}
+        },
+        {
+          "type": "textbox",
+          "title": "",
+          "position": {
+            "x": 32,
+            "y": 785,
+            "width": 1350,
+            "height": 72,
+            "z": 19,
+            "tabOrder": 19
+          },
+          "roles": {}
+        }
+      ]
+    }
+  ],
+  "metricExpressions": {
+    "Total MQLs": "COUNTROWS(fact_lead)",
+    "Closed Deals": "SUM(fact_lead[converted])",
+    "Conversion Rate": "DIVIDE([Closed Deals], [Total MQLs])",
+    "Active Sellers": "SUM(fact_lead[active])",
+    "Activation Rate": "DIVIDE([Active Sellers], [Closed Deals])",
+    "Attributed GMV": "SUM(fact_lead[gmv])",
+    "GMV per Lead": "DIVIDE([Attributed GMV], [Total MQLs])",
+    "GMV per Converted Seller": "DIVIDE([Attributed GMV], [Closed Deals])",
+    "Average Close Days": "AVERAGE(fact_lead[close_days])",
+    "Average First Sale Days": "AVERAGE(fact_lead[close_to_first_sale_days])",
+    "Repeat Sellers": "SUM(fact_lead[repeat_seller])",
+    "Repeat Seller Rate": "DIVIDE([Repeat Sellers], [Active Sellers])",
+    "Seller Order Pairs": "SUM(fact_lead[orders])",
+    "Orders per Active Seller": "DIVIDE([Seller Order Pairs], [Active Sellers])",
+    "Attributed Marketplace Orders": "CALCULATE(DISTINCTCOUNT(fact_seller_order[order_id]), TREATAS(VALUES(fact_lead[seller_id]), fact_seller_order[seller_id]))",
+    "Attributed Item AOV": "DIVIDE(CALCULATE(SUM(fact_seller_order[gmv]), TREATAS(VALUES(fact_lead[seller_id]), fact_seller_order[seller_id])), [Attributed Marketplace Orders])",
+    "Top 10 Percent GMV Share": "\nVAR Sellers = FILTER(ALLSELECTED(fact_lead), fact_lead[active] = 1)\nVAR TopNCount = ROUNDUP(COUNTROWS(Sellers) * 0.1, 0)\nVAR TopSellers = TOPN(TopNCount, Sellers, fact_lead[gmv], DESC, fact_lead[seller_id], ASC)\nRETURN DIVIDE(SUMX(TopSellers, fact_lead[gmv]), SUMX(Sellers, fact_lead[gmv]))",
+    "Onboarding Backlog": "[Closed Deals] - [Active Sellers]",
+    "Onboarding Flag": "IF([Closed Deals] > 0 && [Active Sellers] = 0, 1, BLANK())",
+    "Activation Gap": "1 - [Activation Rate]",
+    "Average Active Seller GMV": "DIVIDE([Attributed GMV], [Active Sellers])",
+    "Converted Segment Deals": "[Closed Deals]",
+    "Context Insight": "IF([Total MQLs] = 0, \"No leads match the current selection\", FORMAT([Onboarding Backlog], \"#,0\") & \" converted sellers have no observed post-close delivered order. Review cohort maturity before outreach.\")",
+    "Period Coverage": "FORMAT(MIN(fact_lead[contact_date]), \"dd MMM yyyy\") & \" – \" & FORMAT(MAX(fact_lead[contact_date]), \"dd MMM yyyy\")",
+    "Invalid Close Records": "SUM(fact_lead[invalid_close_chronology])"
+  }
+}

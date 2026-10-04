@@ -2,7 +2,13 @@
 
 **Owner:** Satya Ranjan Nayak
 
-**Status:** Source analysis completed; Power BI Desktop build remains manual.
+**Status:** Native Power BI project built as a release candidate; Desktop rendering and DAX execution acceptance pending.
+
+## Native Power BI dashboard
+
+The editable four-page dashboard and semantic model are in [06_PowerBI/Native](06_PowerBI/Native/README.md). Run its path setup script, open `RevenueFunnel.pbip`, and Refresh in Power BI Desktop. See the included release checklist for pending Desktop/Service acceptance.
+
+![Reviewed-data design preview — not a Power BI screenshot](06_PowerBI/Native/DesignPreview.png)
 
 ## Business Problem
 

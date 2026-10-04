@@ -1,0 +1,289 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "v12",
+  "position": {
+    "x": 24,
+    "y": 600,
+    "width": 1392,
+    "height": 292,
+    "z": 12,
+    "tabOrder": 12
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "drillFilterOtherVisuals": true,
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Channel comparison · review counts before prioritizing spend'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "13D"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#172A43'"
+                    }
+                  }
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Segoe UI Semibold'"
+                }
+              }
+            },
+            "titleWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#FFFFFF'"
+                    }
+                  }
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "altText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Channel comparison · review counts before prioritizing spend'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "objects": {
+      "grid": [
+        {
+          "properties": {
+            "gridVertical": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "rowPadding": {
+              "expr": {
+                "Literal": {
+                  "Value": "7D"
+                }
+              }
+            },
+            "textSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "11D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_channel"
+                    }
+                  },
+                  "Property": "origin"
+                }
+              },
+              "queryRef": "dim_channel.origin",
+              "nativeQueryRef": "origin",
+              "displayName": "Channel"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_lead"
+                    }
+                  },
+                  "Property": "Total MQLs"
+                }
+              },
+              "queryRef": "fact_lead.Total MQLs",
+              "nativeQueryRef": "Total MQLs",
+              "displayName": "Total MQLs"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_lead"
+                    }
+                  },
+                  "Property": "Closed Deals"
+                }
+              },
+              "queryRef": "fact_lead.Closed Deals",
+              "nativeQueryRef": "Closed Deals",
+              "displayName": "Closed Deals"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_lead"
+                    }
+                  },
+                  "Property": "Conversion Rate"
+                }
+              },
+              "queryRef": "fact_lead.Conversion Rate",
+              "nativeQueryRef": "Conversion Rate",
+              "displayName": "Conversion Rate"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_lead"
+                    }
+                  },
+                  "Property": "Active Sellers"
+                }
+              },
+              "queryRef": "fact_lead.Active Sellers",
+              "nativeQueryRef": "Active Sellers",
+              "displayName": "Active Sellers"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_lead"
+                    }
+                  },
+                  "Property": "Activation Rate"
+                }
+              },
+              "queryRef": "fact_lead.Activation Rate",
+              "nativeQueryRef": "Activation Rate",
+              "displayName": "Activation Rate"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_lead"
+                    }
+                  },
+                  "Property": "Attributed GMV"
+                }
+              },
+              "queryRef": "fact_lead.Attributed GMV",
+              "nativeQueryRef": "Attributed GMV",
+              "displayName": "Attributed GMV"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_lead"
+                    }
+                  },
+                  "Property": "GMV per Lead"
+                }
+              },
+              "queryRef": "fact_lead.GMV per Lead",
+              "nativeQueryRef": "GMV per Lead",
+              "displayName": "GMV per Lead"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "fact_lead"
+                  }
+                },
+                "Property": "Total MQLs"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": false
+      }
+    }
+  }
+}

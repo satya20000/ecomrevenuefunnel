@@ -1,0 +1,795 @@
+{
+  "name": "RevenueFunnel",
+  "compatibilityLevel": 1600,
+  "model": {
+    "culture": "en-US",
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": false
+    },
+    "expressions": [
+      {
+        "name": "DataFolder",
+        "kind": "m",
+        "expression": "\"C:\\PowerBI\\Data\" meta [IsParameterQuery=true, Type=\"Text\", IsParameterQueryRequired=true]"
+      }
+    ],
+    "tables": [
+      {
+        "name": "fact_lead",
+        "columns": [
+          {
+            "name": "mql_id",
+            "dataType": "string",
+            "sourceColumn": "mql_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "first_contact_date",
+            "dataType": "dateTime",
+            "sourceColumn": "first_contact_date",
+            "summarizeBy": "none",
+            "formatString": "yyyy-MM-dd HH:mm"
+          },
+          {
+            "name": "landing_page_id",
+            "dataType": "string",
+            "sourceColumn": "landing_page_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "origin",
+            "dataType": "string",
+            "sourceColumn": "origin",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "seller_id",
+            "dataType": "string",
+            "sourceColumn": "seller_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "sdr_id",
+            "dataType": "string",
+            "sourceColumn": "sdr_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "sr_id",
+            "dataType": "string",
+            "sourceColumn": "sr_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "won_date",
+            "dataType": "dateTime",
+            "sourceColumn": "won_date",
+            "summarizeBy": "none",
+            "formatString": "yyyy-MM-dd HH:mm"
+          },
+          {
+            "name": "business_segment",
+            "dataType": "string",
+            "sourceColumn": "business_segment",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "lead_type",
+            "dataType": "string",
+            "sourceColumn": "lead_type",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "lead_behaviour_profile",
+            "dataType": "string",
+            "sourceColumn": "lead_behaviour_profile",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "has_company",
+            "dataType": "string",
+            "sourceColumn": "has_company",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "has_gtin",
+            "dataType": "string",
+            "sourceColumn": "has_gtin",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "average_stock",
+            "dataType": "string",
+            "sourceColumn": "average_stock",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "business_type",
+            "dataType": "string",
+            "sourceColumn": "business_type",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "declared_product_catalog_size",
+            "dataType": "double",
+            "sourceColumn": "declared_product_catalog_size",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "declared_monthly_revenue",
+            "dataType": "double",
+            "sourceColumn": "declared_monthly_revenue",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "seller_zip_code_prefix",
+            "dataType": "double",
+            "sourceColumn": "seller_zip_code_prefix",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "seller_city",
+            "dataType": "string",
+            "sourceColumn": "seller_city",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "seller_state",
+            "dataType": "string",
+            "sourceColumn": "seller_state",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "converted",
+            "dataType": "int64",
+            "sourceColumn": "converted",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "close_days",
+            "dataType": "double",
+            "sourceColumn": "close_days",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "invalid_close_chronology",
+            "dataType": "int64",
+            "sourceColumn": "invalid_close_chronology",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "orders",
+            "dataType": "int64",
+            "sourceColumn": "orders",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "gmv",
+            "dataType": "double",
+            "sourceColumn": "gmv",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "first_sale",
+            "dataType": "dateTime",
+            "sourceColumn": "first_sale",
+            "summarizeBy": "none",
+            "formatString": "yyyy-MM-dd HH:mm"
+          },
+          {
+            "name": "active",
+            "dataType": "int64",
+            "sourceColumn": "active",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "repeat_seller",
+            "dataType": "int64",
+            "sourceColumn": "repeat_seller",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "close_to_first_sale_days",
+            "dataType": "double",
+            "sourceColumn": "close_to_first_sale_days",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "seller_segment",
+            "dataType": "string",
+            "sourceColumn": "seller_segment",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "lead_month",
+            "dataType": "string",
+            "sourceColumn": "lead_month",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "close_month",
+            "dataType": "string",
+            "sourceColumn": "close_month",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "contact_date",
+            "dataType": "dateTime",
+            "sourceColumn": "contact_date",
+            "summarizeBy": "none",
+            "formatString": "yyyy-MM-dd"
+          },
+          {
+            "name": "close_date",
+            "dataType": "dateTime",
+            "sourceColumn": "close_date",
+            "summarizeBy": "none",
+            "formatString": "yyyy-MM-dd"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "fact_lead",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(DataFolder & \"\\fact_lead.csv\"), [Delimiter=\",\", Columns=34, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Nulls = Table.ReplaceValue(Headers, \"\", null, Replacer.ReplaceValue, Table.ColumnNames(Headers)),",
+                "    Typed = Table.TransformColumnTypes(Nulls, {{\"mql_id\", type text}, {\"first_contact_date\", type datetime}, {\"landing_page_id\", type text}, {\"origin\", type text}, {\"seller_id\", type text}, {\"sdr_id\", type text}, {\"sr_id\", type text}, {\"won_date\", type datetime}, {\"business_segment\", type text}, {\"lead_type\", type text}, {\"lead_behaviour_profile\", type text}, {\"has_company\", type text}, {\"has_gtin\", type text}, {\"average_stock\", type text}, {\"business_type\", type text}, {\"declared_product_catalog_size\", type number}, {\"declared_monthly_revenue\", type number}, {\"seller_zip_code_prefix\", type number}, {\"seller_city\", type text}, {\"seller_state\", type text}, {\"converted\", Int64.Type}, {\"close_days\", type number}, {\"invalid_close_chronology\", Int64.Type}, {\"orders\", Int64.Type}, {\"gmv\", type number}, {\"first_sale\", type datetime}, {\"active\", Int64.Type}, {\"repeat_seller\", Int64.Type}, {\"close_to_first_sale_days\", type number}, {\"seller_segment\", type text}, {\"lead_month\", type text}, {\"close_month\", type text}, {\"contact_date\", type date}, {\"close_date\", type date}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ]
+            }
+          }
+        ],
+        "measures": [
+          {
+            "name": "Total MQLs",
+            "expression": "COUNTROWS(fact_lead)",
+            "displayFolder": "Performance",
+            "description": "Total MQLs; defined over the current slicer and visual context. See report definitions and DAX source for population policy.",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Closed Deals",
+            "expression": "SUM(fact_lead[converted])",
+            "displayFolder": "Performance",
+            "description": "Closed Deals; defined over the current slicer and visual context. See report definitions and DAX source for population policy.",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Conversion Rate",
+            "expression": "DIVIDE([Closed Deals], [Total MQLs])",
+            "displayFolder": "Performance",
+            "description": "Conversion Rate; defined over the current slicer and visual context. See report definitions and DAX source for population policy.",
+            "formatString": "0.0%;-0.0%;0.0%"
+          },
+          {
+            "name": "Active Sellers",
+            "expression": "SUM(fact_lead[active])",
+            "displayFolder": "Performance",
+            "description": "Active Sellers; defined over the current slicer and visual context. See report definitions and DAX source for population policy.",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Activation Rate",
+            "expression": "DIVIDE([Active Sellers], [Closed Deals])",
+            "displayFolder": "Performance",
+            "description": "Activation Rate; defined over the current slicer and visual context. See report definitions and DAX source for population policy.",
+            "formatString": "0.0%;-0.0%;0.0%"
+          },
+          {
+            "name": "Attributed GMV",
+            "expression": "SUM(fact_lead[gmv])",
+            "displayFolder": "Performance",
+            "description": "Attributed GMV; defined over the current slicer and visual context. See report definitions and DAX source for population policy.",
+            "formatString": "\"BRL \"#,0.00;(#,0.00);0.00"
+          },
+          {
+            "name": "GMV per Lead",
+            "expression": "DIVIDE([Attributed GMV], [Total MQLs])",
+            "displayFolder": "Performance",
+            "description": "GMV per Lead; defined over the current slicer and visual context. See report definitions and DAX source for population policy.",
+            "formatString": "\"BRL \"#,0.00;(#,0.00);0.00"
+          },
+          {
+            "name": "GMV per Converted Seller",
+            "expression": "DIVIDE([Attributed GMV], [Closed Deals])",
+            "displayFolder": "Performance",
+            "description": "GMV per Converted Seller; defined over the current slicer and visual context. See report definitions and DAX source for population policy.",
+            "formatString": "\"BRL \"#,0.00;(#,0.00);0.00"
+          },
+          {
+            "name": "Average Close Days",
+            "expression": "AVERAGE(fact_lead[close_days])",
+            "displayFolder": "Performance",
+            "description": "Average Close Days; defined over the current slicer and visual context. See report definitions and DAX source for population policy.",
+            "formatString": "0.00"
+          },
+          {
+            "name": "Average First Sale Days",
+            "expression": "AVERAGE(fact_lead[close_to_first_sale_days])",
+            "displayFolder": "Performance",
+            "description": "Average First Sale Days; defined over the current slicer and visual context. See report definitions and DAX source for population policy.",
+            "formatString": "0.00"
+          },
+          {
+            "name": "Repeat Sellers",
+            "expression": "SUM(fact_lead[repeat_seller])",
+            "displayFolder": "Performance",
+            "description": "Repeat Sellers; defined over the current slicer and visual context. See report definitions and DAX source for population policy.",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Repeat Seller Rate",
+            "expression": "DIVIDE([Repeat Sellers], [Active Sellers])",
+            "displayFolder": "Performance",
+            "description": "Repeat Seller Rate; defined over the current slicer and visual context. See report definitions and DAX source for population policy.",
+            "formatString": "0.0%;-0.0%;0.0%"
+          },
+          {
+            "name": "Seller Order Pairs",
+            "expression": "SUM(fact_lead[orders])",
+            "displayFolder": "Performance",
+            "description": "Seller Order Pairs; defined over the current slicer and visual context. See report definitions and DAX source for population policy.",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Orders per Active Seller",
+            "expression": "DIVIDE([Seller Order Pairs], [Active Sellers])",
+            "displayFolder": "Performance",
+            "description": "Orders per Active Seller; defined over the current slicer and visual context. See report definitions and DAX source for population policy.",
+            "formatString": "0.00"
+          },
+          {
+            "name": "Attributed Marketplace Orders",
+            "expression": "CALCULATE(DISTINCTCOUNT(fact_seller_order[order_id]), TREATAS(VALUES(fact_lead[seller_id]), fact_seller_order[seller_id]))",
+            "displayFolder": "Performance",
+            "description": "Attributed Marketplace Orders; defined over the current slicer and visual context. See report definitions and DAX source for population policy.",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Attributed Item AOV",
+            "expression": "DIVIDE(CALCULATE(SUM(fact_seller_order[gmv]), TREATAS(VALUES(fact_lead[seller_id]), fact_seller_order[seller_id])), [Attributed Marketplace Orders])",
+            "displayFolder": "Performance",
+            "description": "Attributed Item AOV; defined over the current slicer and visual context. See report definitions and DAX source for population policy.",
+            "formatString": "\"BRL \"#,0.00;(#,0.00);0.00"
+          },
+          {
+            "name": "Top 10 Percent GMV Share",
+            "expression": "\nVAR Sellers = FILTER(ALLSELECTED(fact_lead), fact_lead[active] = 1)\nVAR TopNCount = ROUNDUP(COUNTROWS(Sellers) * 0.1, 0)\nVAR TopSellers = TOPN(TopNCount, Sellers, fact_lead[gmv], DESC, fact_lead[seller_id], ASC)\nRETURN DIVIDE(SUMX(TopSellers, fact_lead[gmv]), SUMX(Sellers, fact_lead[gmv]))",
+            "displayFolder": "Performance",
+            "description": "Top 10 Percent GMV Share; defined over the current slicer and visual context. See report definitions and DAX source for population policy.",
+            "formatString": "\"BRL \"0.0%;-0.0%;0.0%"
+          },
+          {
+            "name": "Onboarding Backlog",
+            "expression": "[Closed Deals] - [Active Sellers]",
+            "displayFolder": "Investigations",
+            "description": "Onboarding Backlog; defined over the current slicer and visual context. See report definitions and DAX source for population policy.",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Onboarding Flag",
+            "expression": "IF([Closed Deals] > 0 && [Active Sellers] = 0, 1, BLANK())",
+            "displayFolder": "Investigations",
+            "description": "Onboarding Flag; defined over the current slicer and visual context. See report definitions and DAX source for population policy.",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Activation Gap",
+            "expression": "1 - [Activation Rate]",
+            "displayFolder": "Performance",
+            "description": "Activation Gap; defined over the current slicer and visual context. See report definitions and DAX source for population policy.",
+            "formatString": "0.0%;-0.0%;0.0%"
+          },
+          {
+            "name": "Average Active Seller GMV",
+            "expression": "DIVIDE([Attributed GMV], [Active Sellers])",
+            "displayFolder": "Performance",
+            "description": "Average Active Seller GMV; defined over the current slicer and visual context. See report definitions and DAX source for population policy.",
+            "formatString": "\"BRL \"#,0.00;(#,0.00);0.00"
+          },
+          {
+            "name": "Converted Segment Deals",
+            "expression": "[Closed Deals]",
+            "displayFolder": "Performance",
+            "description": "Converted Segment Deals; defined over the current slicer and visual context. See report definitions and DAX source for population policy.",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Context Insight",
+            "expression": "IF([Total MQLs] = 0, \"No leads match the current selection\", FORMAT([Onboarding Backlog], \"#,0\") & \" converted sellers have no observed post-close delivered order. Review cohort maturity before outreach.\")",
+            "displayFolder": "Context & quality",
+            "description": "Context Insight; defined over the current slicer and visual context. See report definitions and DAX source for population policy."
+          },
+          {
+            "name": "Period Coverage",
+            "expression": "FORMAT(MIN(fact_lead[contact_date]), \"dd MMM yyyy\") & \" – \" & FORMAT(MAX(fact_lead[contact_date]), \"dd MMM yyyy\")",
+            "displayFolder": "Context & quality",
+            "description": "Period Coverage; defined over the current slicer and visual context. See report definitions and DAX source for population policy."
+          },
+          {
+            "name": "Invalid Close Records",
+            "expression": "SUM(fact_lead[invalid_close_chronology])",
+            "displayFolder": "Performance",
+            "description": "Invalid Close Records; defined over the current slicer and visual context. See report definitions and DAX source for population policy.",
+            "formatString": "#,0"
+          }
+        ]
+      },
+      {
+        "name": "fact_seller_order",
+        "columns": [
+          {
+            "name": "seller_id",
+            "dataType": "string",
+            "sourceColumn": "seller_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "order_id",
+            "dataType": "string",
+            "sourceColumn": "order_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "order_purchase_timestamp",
+            "dataType": "dateTime",
+            "sourceColumn": "order_purchase_timestamp",
+            "summarizeBy": "none",
+            "formatString": "yyyy-MM-dd HH:mm"
+          },
+          {
+            "name": "gmv",
+            "dataType": "double",
+            "sourceColumn": "gmv",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "purchase_date",
+            "dataType": "dateTime",
+            "sourceColumn": "purchase_date",
+            "summarizeBy": "none",
+            "formatString": "yyyy-MM-dd"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "fact_seller_order",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(DataFolder & \"\\fact_seller_order.csv\"), [Delimiter=\",\", Columns=5, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Nulls = Table.ReplaceValue(Headers, \"\", null, Replacer.ReplaceValue, Table.ColumnNames(Headers)),",
+                "    Typed = Table.TransformColumnTypes(Nulls, {{\"seller_id\", type text}, {\"order_id\", type text}, {\"order_purchase_timestamp\", type datetime}, {\"gmv\", type number}, {\"purchase_date\", type date}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "dim_channel",
+        "columns": [
+          {
+            "name": "origin",
+            "dataType": "string",
+            "sourceColumn": "origin",
+            "summarizeBy": "none"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "dim_channel",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(DataFolder & \"\\dim_channel.csv\"), [Delimiter=\",\", Columns=1, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Nulls = Table.ReplaceValue(Headers, \"\", null, Replacer.ReplaceValue, Table.ColumnNames(Headers)),",
+                "    Typed = Table.TransformColumnTypes(Nulls, {{\"origin\", type text}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ]
+            }
+          }
+        ],
+        "description": "Single-direction dimension; keys validated against source data."
+      },
+      {
+        "name": "dim_segment",
+        "columns": [
+          {
+            "name": "business_segment",
+            "dataType": "string",
+            "sourceColumn": "business_segment",
+            "summarizeBy": "none"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "dim_segment",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(DataFolder & \"\\dim_segment.csv\"), [Delimiter=\",\", Columns=1, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Nulls = Table.ReplaceValue(Headers, \"\", null, Replacer.ReplaceValue, Table.ColumnNames(Headers)),",
+                "    Typed = Table.TransformColumnTypes(Nulls, {{\"business_segment\", type text}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ]
+            }
+          }
+        ],
+        "description": "Single-direction dimension; keys validated against source data."
+      },
+      {
+        "name": "dim_sdr",
+        "columns": [
+          {
+            "name": "sdr_id",
+            "dataType": "string",
+            "sourceColumn": "sdr_id",
+            "summarizeBy": "none"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "dim_sdr",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(DataFolder & \"\\dim_sdr.csv\"), [Delimiter=\",\", Columns=1, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Nulls = Table.ReplaceValue(Headers, \"\", null, Replacer.ReplaceValue, Table.ColumnNames(Headers)),",
+                "    Typed = Table.TransformColumnTypes(Nulls, {{\"sdr_id\", type text}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ]
+            }
+          }
+        ],
+        "description": "Single-direction dimension; keys validated against source data."
+      },
+      {
+        "name": "dim_sales_rep",
+        "columns": [
+          {
+            "name": "sr_id",
+            "dataType": "string",
+            "sourceColumn": "sr_id",
+            "summarizeBy": "none"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "dim_sales_rep",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(DataFolder & \"\\dim_sales_rep.csv\"), [Delimiter=\",\", Columns=1, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Nulls = Table.ReplaceValue(Headers, \"\", null, Replacer.ReplaceValue, Table.ColumnNames(Headers)),",
+                "    Typed = Table.TransformColumnTypes(Nulls, {{\"sr_id\", type text}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ]
+            }
+          }
+        ],
+        "description": "Single-direction dimension; keys validated against source data."
+      },
+      {
+        "name": "dim_seller",
+        "columns": [
+          {
+            "name": "seller_id",
+            "dataType": "string",
+            "sourceColumn": "seller_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "seller_zip_code_prefix",
+            "dataType": "int64",
+            "sourceColumn": "seller_zip_code_prefix",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "seller_city",
+            "dataType": "string",
+            "sourceColumn": "seller_city",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "seller_state",
+            "dataType": "string",
+            "sourceColumn": "seller_state",
+            "summarizeBy": "none"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "dim_seller",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(DataFolder & \"\\..\\06_PowerBI\\Native\\ModelData\\dim_seller.csv\"), [Delimiter=\",\", Columns=4, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Nulls = Table.ReplaceValue(Headers, \"\", null, Replacer.ReplaceValue, Table.ColumnNames(Headers)),",
+                "    Typed = Table.TransformColumnTypes(Nulls, {{\"seller_id\", type text}, {\"seller_zip_code_prefix\", Int64.Type}, {\"seller_city\", type text}, {\"seller_state\", type text}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ]
+            }
+          }
+        ],
+        "description": "Single-direction dimension; keys validated against source data."
+      },
+      {
+        "name": "dim_date",
+        "columns": [
+          {
+            "name": "date",
+            "dataType": "dateTime",
+            "sourceColumn": "date",
+            "summarizeBy": "none",
+            "formatString": "yyyy-MM-dd"
+          },
+          {
+            "name": "year",
+            "dataType": "int64",
+            "sourceColumn": "year",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "month",
+            "dataType": "string",
+            "sourceColumn": "month",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "quarter",
+            "dataType": "int64",
+            "sourceColumn": "quarter",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "month_number",
+            "dataType": "int64",
+            "sourceColumn": "month_number",
+            "summarizeBy": "none"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "dim_date",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(DataFolder & \"\\dim_date.csv\"), [Delimiter=\",\", Columns=5, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Nulls = Table.ReplaceValue(Headers, \"\", null, Replacer.ReplaceValue, Table.ColumnNames(Headers)),",
+                "    Typed = Table.TransformColumnTypes(Nulls, {{\"date\", type date}, {\"year\", Int64.Type}, {\"month\", type text}, {\"quarter\", Int64.Type}, {\"month_number\", Int64.Type}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ]
+            }
+          }
+        ],
+        "description": "Single-direction dimension; keys validated against source data."
+      }
+    ],
+    "relationships": [
+      {
+        "name": "33fdc32c-28dc-5031-8d72-be7e9e5a5f94",
+        "fromTable": "fact_lead",
+        "fromColumn": "origin",
+        "toTable": "dim_channel",
+        "toColumn": "origin",
+        "fromCardinality": "many",
+        "toCardinality": "one",
+        "crossFilteringBehavior": "oneDirection",
+        "isActive": true
+      },
+      {
+        "name": "5889bcb3-6cc7-53d3-8985-0697dca5e8db",
+        "fromTable": "fact_lead",
+        "fromColumn": "business_segment",
+        "toTable": "dim_segment",
+        "toColumn": "business_segment",
+        "fromCardinality": "many",
+        "toCardinality": "one",
+        "crossFilteringBehavior": "oneDirection",
+        "isActive": true
+      },
+      {
+        "name": "8350fdc9-4bd2-56e3-95dc-8d9601fe06fd",
+        "fromTable": "fact_lead",
+        "fromColumn": "sdr_id",
+        "toTable": "dim_sdr",
+        "toColumn": "sdr_id",
+        "fromCardinality": "many",
+        "toCardinality": "one",
+        "crossFilteringBehavior": "oneDirection",
+        "isActive": true
+      },
+      {
+        "name": "d750db6d-1d02-539b-8108-00cb84ebd34f",
+        "fromTable": "fact_lead",
+        "fromColumn": "sr_id",
+        "toTable": "dim_sales_rep",
+        "toColumn": "sr_id",
+        "fromCardinality": "many",
+        "toCardinality": "one",
+        "crossFilteringBehavior": "oneDirection",
+        "isActive": true
+      },
+      {
+        "name": "55a6f2fb-b7f5-505f-b5f4-6b4ba8dadef1",
+        "fromTable": "fact_lead",
+        "fromColumn": "seller_id",
+        "toTable": "dim_seller",
+        "toColumn": "seller_id",
+        "fromCardinality": "many",
+        "toCardinality": "one",
+        "crossFilteringBehavior": "oneDirection",
+        "isActive": true
+      },
+      {
+        "name": "652a8fc2-4c25-520c-8db5-1735f4a74fe5",
+        "fromTable": "fact_seller_order",
+        "fromColumn": "seller_id",
+        "toTable": "dim_seller",
+        "toColumn": "seller_id",
+        "fromCardinality": "many",
+        "toCardinality": "one",
+        "crossFilteringBehavior": "oneDirection",
+        "isActive": true
+      },
+      {
+        "name": "0a63d4f5-7339-5467-844a-509e8b73bdb8",
+        "fromTable": "fact_lead",
+        "fromColumn": "contact_date",
+        "toTable": "dim_date",
+        "toColumn": "date",
+        "fromCardinality": "many",
+        "toCardinality": "one",
+        "crossFilteringBehavior": "oneDirection",
+        "isActive": true
+      }
+    ],
+    "annotations": [
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"fact_lead\", \"fact_seller_order\", \"dim_channel\", \"dim_segment\", \"dim_sdr\", \"dim_sales_rep\", \"dim_seller\", \"dim_date\"]"
+      },
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "0"
+      }
+    ]
+  }
+}

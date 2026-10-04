@@ -1,0 +1,7 @@
+EVALUATE
+ROW(
+    "Total MQLs", [Total MQLs],
+    "Conversion Rate", [Conversion Rate],
+    "Activation Rate", [Activation Rate],
+    "Attributed GMV", [Attributed GMV]
+)
