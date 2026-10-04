@@ -1,0 +1,10 @@
+[
+  {
+    "check": "Lead input change updates total MQLs",
+    "passed": true
+  },
+  {
+    "check": "Editable sample threshold updates classification",
+    "passed": true
+  }
+]

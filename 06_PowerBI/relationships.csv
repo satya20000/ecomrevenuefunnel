@@ -1,0 +1,8 @@
+one_table,one_key,many_table,many_key,cardinality,direction,active
+dim_channel,origin,fact_lead,origin,1:*,Single: one to many,True
+dim_segment,business_segment,fact_lead,business_segment,1:*,Single: one to many,True
+dim_sdr,sdr_id,fact_lead,sdr_id,1:*,Single: one to many,True
+dim_sales_rep,sr_id,fact_lead,sr_id,1:*,Single: one to many,True
+dim_seller,seller_id,fact_lead,seller_id,1:*,Single: one to many,True
+dim_seller,seller_id,fact_seller_order,seller_id,1:*,Single: one to many,True
+dim_date,date,fact_lead,contact_date,1:*,Single: one to many,True

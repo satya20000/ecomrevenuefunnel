@@ -1,0 +1,72 @@
+field,source_table,data_type,meaning,transformation
+seller_id,dim_seller,object,Seller id,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+seller_zip_code_prefix,dim_seller,int64,Seller zip code prefix,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+seller_city,dim_seller,object,Seller city,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+seller_state,dim_seller,object,Seller state,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+customer_id,dim_customer,object,Customer id,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+customer_unique_id,dim_customer,object,Customer unique id,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+customer_zip_code_prefix,dim_customer,int64,Customer zip code prefix,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+customer_city,dim_customer,object,Customer city,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+customer_state,dim_customer,object,Customer state,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+product_id,dim_product,object,Product id,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+product_category_name,dim_product,object,Product category name,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+product_name_lenght,dim_product,float64,Product name lenght,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+product_description_lenght,dim_product,float64,Product description lenght,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+product_photos_qty,dim_product,float64,Product photos qty,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+product_weight_g,dim_product,float64,Product weight g,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+product_length_cm,dim_product,float64,Product length cm,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+product_height_cm,dim_product,float64,Product height cm,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+product_width_cm,dim_product,float64,Product width cm,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+order_id,fact_payment,object,Order id,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+payment_sequential,fact_payment,int64,Payment sequential,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+payment_type,fact_payment,object,Payment type,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+payment_installments,fact_payment,int64,Payment installments,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+payment_value,fact_payment,float64,Payment value,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+origin,dim_channel,object,Origin,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+business_segment,dim_segment,object,Business segment,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+sdr_id,dim_sdr,object,Sdr id,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+sr_id,dim_sales_rep,object,Sr id,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+mql_id,fact_lead,object,Mql id,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+first_contact_date,fact_lead,object,First contact date,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+landing_page_id,fact_lead,object,Landing page id,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+origin,fact_lead,object,Origin,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+seller_id,fact_lead,object,Seller id,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+sdr_id,fact_lead,object,Sdr id,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+sr_id,fact_lead,object,Sr id,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+won_date,fact_lead,object,Won date,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+business_segment,fact_lead,object,Business segment,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+lead_type,fact_lead,object,Lead type,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+lead_behaviour_profile,fact_lead,object,Lead behaviour profile,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+has_company,fact_lead,object,Has company,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+has_gtin,fact_lead,object,Has gtin,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+average_stock,fact_lead,object,Average stock,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+business_type,fact_lead,object,Business type,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+declared_product_catalog_size,fact_lead,float64,Declared product catalog size,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+declared_monthly_revenue,fact_lead,float64,Declared monthly revenue,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+seller_zip_code_prefix,fact_lead,float64,Seller zip code prefix,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+seller_city,fact_lead,object,Seller city,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+seller_state,fact_lead,object,Seller state,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+converted,fact_lead,int64,Converted,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+close_days,fact_lead,float64,Close days,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+invalid_close_chronology,fact_lead,int64,Invalid close chronology,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+orders,fact_lead,int64,Distinct order count at stated table grain,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+gmv,fact_lead,float64,Sum of item prices in BRL; excludes freight and platform commission,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+first_sale,fact_lead,object,First sale,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+active,fact_lead,int64,Active,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+repeat_seller,fact_lead,int64,Repeat seller,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+close_to_first_sale_days,fact_lead,float64,Close to first sale days,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+seller_segment,fact_lead,object,Seller segment,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+lead_month,fact_lead,object,Lead month,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+close_month,fact_lead,object,Close month,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+contact_date,fact_lead,object,Contact date,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+close_date,fact_lead,object,Close date,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+seller_id,fact_seller_order,object,Seller id,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+order_id,fact_seller_order,object,Order id,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+order_purchase_timestamp,fact_seller_order,object,Order purchase timestamp,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+gmv,fact_seller_order,float64,Sum of item prices in BRL; excludes freight and platform commission,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+purchase_date,fact_seller_order,object,Purchase date,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+date,dim_date,object,Date,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+year,dim_date,int32,Year,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+month,dim_date,object,Month,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+quarter,dim_date,int32,Quarter,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+month_number,dim_date,int32,Month number,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero

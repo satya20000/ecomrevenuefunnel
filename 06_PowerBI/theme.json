@@ -1,0 +1,13 @@
+{
+  "name": "Satya Analytics",
+  "dataColors": [
+    "#315AA8",
+    "#12A89D",
+    "#F0B44D",
+    "#B14F6C",
+    "#6E6CAD"
+  ],
+  "background": "#FFFFFF",
+  "foreground": "#14243A",
+  "tableAccent": "#315AA8"
+}

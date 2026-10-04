@@ -1,0 +1,5 @@
+01_Raw_Data/*.csv
+01_Raw_Data/*.gz
+03_SQL/*.sqlite
+__pycache__/
+.ipynb_checkpoints/

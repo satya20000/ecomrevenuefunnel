@@ -1,0 +1,50 @@
+[
+  {
+    "check": "FK order_id",
+    "passed": true
+  },
+  {
+    "check": "FK seller_id",
+    "passed": true
+  },
+  {
+    "check": "FK product_id",
+    "passed": true
+  },
+  {
+    "check": "FK customer_id",
+    "passed": true
+  },
+  {
+    "check": "FK order_id",
+    "passed": true
+  },
+  {
+    "check": "Nonnegative item price/freight",
+    "passed": true
+  },
+  {
+    "check": "One acquisition per converted seller",
+    "passed": true
+  },
+  {
+    "check": "FK mql_id",
+    "passed": true
+  },
+  {
+    "check": "Funnel row preservation",
+    "passed": true
+  },
+  {
+    "check": "Attribution reconciles",
+    "passed": true
+  },
+  {
+    "check": "Stages monotonic",
+    "passed": true
+  },
+  {
+    "check": "SQLite integrity_check",
+    "passed": true
+  }
+]

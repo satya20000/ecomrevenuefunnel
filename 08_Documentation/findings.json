@@ -1,0 +1,16 @@
+{
+  "findings": [
+    "8,000 MQLs produced 842 closed deals (10.53% conversion).",
+    "376 converted sellers had delivered orders purchased after closing (44.66% activation).",
+    "Attributed item GMV was BRL 664,858.00; this is marketplace merchandise value, not Olist net revenue.",
+    "Top 38 active sellers (ceiling of 10%) contributed 64.82% of attributed GMV.",
+    "295 sellers generated at least two post-close delivered orders.",
+    "unknown had the highest observed GMV per lead among channels with at least 50 MQLs: BRL 181.96."
+  ],
+  "recommendations": [
+    "Use observed GMV per lead together with activation to shortlist channel experiments; acquire spend data before claiming ROI.",
+    "Prioritize onboarding for converted sellers without post-close delivered orders. Separate recent wins from fully observed cohorts.",
+    "Inspect the largest seller accounts individually because concentration makes channel results sensitive to a few merchants.",
+    "Obtain assignment histories for lost leads before measuring SDR or sales-representative conversion rates."
+  ]
+}

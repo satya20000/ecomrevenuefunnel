@@ -1,0 +1,95 @@
+{
+  "dim_customer": {
+    "customer_id": "type text",
+    "customer_unique_id": "type text",
+    "customer_zip_code_prefix": "Int64.Type",
+    "customer_city": "type text",
+    "customer_state": "type text"
+  },
+  "dim_date": {
+    "date": "type date",
+    "year": "Int64.Type",
+    "month": "type text",
+    "quarter": "Int64.Type",
+    "month_number": "Int64.Type"
+  },
+  "dim_sdr": {
+    "sdr_id": "type text"
+  },
+  "fact_lead": {
+    "mql_id": "type text",
+    "first_contact_date": "type datetime",
+    "landing_page_id": "type text",
+    "origin": "type text",
+    "seller_id": "type text",
+    "sdr_id": "type text",
+    "sr_id": "type text",
+    "won_date": "type datetime",
+    "business_segment": "type text",
+    "lead_type": "type text",
+    "lead_behaviour_profile": "type text",
+    "has_company": "type text",
+    "has_gtin": "type text",
+    "average_stock": "type text",
+    "business_type": "type text",
+    "declared_product_catalog_size": "type number",
+    "declared_monthly_revenue": "type number",
+    "seller_zip_code_prefix": "type number",
+    "seller_city": "type text",
+    "seller_state": "type text",
+    "converted": "Int64.Type",
+    "close_days": "type number",
+    "invalid_close_chronology": "Int64.Type",
+    "orders": "Int64.Type",
+    "gmv": "type number",
+    "first_sale": "type datetime",
+    "active": "Int64.Type",
+    "repeat_seller": "Int64.Type",
+    "close_to_first_sale_days": "type number",
+    "seller_segment": "type text",
+    "lead_month": "type text",
+    "close_month": "type text",
+    "contact_date": "type date",
+    "close_date": "type date"
+  },
+  "dim_product": {
+    "product_id": "type text",
+    "product_category_name": "type text",
+    "product_name_lenght": "type number",
+    "product_description_lenght": "type number",
+    "product_photos_qty": "type number",
+    "product_weight_g": "type number",
+    "product_length_cm": "type number",
+    "product_height_cm": "type number",
+    "product_width_cm": "type number"
+  },
+  "dim_seller": {
+    "seller_id": "type text",
+    "seller_zip_code_prefix": "Int64.Type",
+    "seller_city": "type text",
+    "seller_state": "type text"
+  },
+  "dim_segment": {
+    "business_segment": "type text"
+  },
+  "fact_seller_order": {
+    "seller_id": "type text",
+    "order_id": "type text",
+    "order_purchase_timestamp": "type datetime",
+    "gmv": "type number",
+    "purchase_date": "type date"
+  },
+  "dim_sales_rep": {
+    "sr_id": "type text"
+  },
+  "fact_payment": {
+    "order_id": "type text",
+    "payment_sequential": "Int64.Type",
+    "payment_type": "type text",
+    "payment_installments": "Int64.Type",
+    "payment_value": "type number"
+  },
+  "dim_channel": {
+    "origin": "type text"
+  }
+}
