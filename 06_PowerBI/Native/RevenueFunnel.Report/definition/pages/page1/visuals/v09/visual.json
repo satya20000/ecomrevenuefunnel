@@ -33,7 +33,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "13D"
+                  "Value": "14D"
                 }
               }
             },
@@ -42,7 +42,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#172A43'"
+                      "Value": "'#17324D'"
                     }
                   }
                 }
@@ -118,11 +118,11 @@
               {
                 "textRuns": [
                   {
-                    "value": "Historical lead cohorts • GMV is item merchandise value, not platform revenue • Shorter observation for recent wins",
+                    "value": "Historical lead cohorts \u2022 GMV is item merchandise value, not platform revenue \u2022 Shorter observation for recent wins",
                     "textStyle": {
                       "fontFamily": "Segoe UI",
                       "fontSize": "11pt",
-                      "color": "#172A43",
+                      "color": "#53657A",
                       "fontWeight": "normal"
                     }
                   }
